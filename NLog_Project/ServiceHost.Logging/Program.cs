@@ -7,7 +7,8 @@ builder.Services.AddRazorPages();
 
 builder.Logging.ClearProviders(); //حذف تمامی پرووایردهایی که فعال شده بودن از قبل
 builder.Logging.AddConsole(); //اگر ثبت لاگ کنیم تو کنسول نشون میده
-
+builder.Logging.AddDebug(); // Debug
+builder.Logging.AddEventLog(); //windows Log
 #endregion
 
 var app = builder.Build();
