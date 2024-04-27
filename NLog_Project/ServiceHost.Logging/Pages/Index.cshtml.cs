@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using ServiceHost.Logging.Models;
 
 namespace ServiceHost.Logging.Pages
 {
@@ -34,8 +35,9 @@ namespace ServiceHost.Logging.Pages
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Error...");
+                _logger.LogError(LogEvent.ErrorType1,ex, "Error Type 1...");
             }
+                _logger.LogError(LogEvent.ErrorType2, "Error Type 2...");
             #endregion
 
             #region Debug&trace
