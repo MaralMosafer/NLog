@@ -33,7 +33,7 @@ namespace ServiceHost.Logging.Pages
             {
                 throw new Exception();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 _logger.LogError(ex, "Error...");
             }
@@ -44,6 +44,17 @@ namespace ServiceHost.Logging.Pages
             int c = a + b;
             _logger.LogDebug("Sum Of 2 Numbers"); //فرایند
             _logger.LogTrace($"c = {c}"); //نتیجه فرایند
+            #endregion
+
+            #region Critical
+            try
+            {
+                throw new Exception();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogCritical(ex, "Example: Can not connect To DataBase...");
+            }
             #endregion
         }
     }
