@@ -9,6 +9,7 @@ builder.Logging.ClearProviders(); //حذف تمامی پرووایردهایی �
 builder.Logging.AddConsole(); //اگر ثبت لاگ کنیم تو کنسول نشون میده
 builder.Logging.AddDebug(); // Debug
 builder.Logging.AddEventLog(); //windows Log
+builder.Logging.AddFile("logs/logtext.txt"); //Logs To File
 #endregion
 
 var app = builder.Build();
