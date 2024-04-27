@@ -4,11 +4,10 @@ namespace ServiceHost.Logging.Pages
 {
     public class IndexModel : PageModel
     {
-        private readonly ILogger<IndexModel> _logger; //دسترسی به ای پی آی ثبت لاگ
-
-        public IndexModel(ILogger<IndexModel> logger)
+        private readonly ILogger _logger; //دسترسی به ای پی آی ثبت لاگ
+        public IndexModel(ILoggerFactory logger)
         {
-            _logger = logger;
+            _logger = logger.CreateLogger("Index");
         }
 
         public void OnGet()
