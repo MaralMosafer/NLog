@@ -14,8 +14,11 @@ namespace ServiceHost.NLog.Pages
 
         public void OnGet()
         {
-            for (int i = 0; i < 10000; i++)
-                nlog.Info($"Test Log For Targets {i}");
+            for (int i = 0; i < 200; i++)
+            {
+                nlog.Info($"Test Log For Rules {i}");
+                nlog.Warn($"Test Log For Rules {i}");
+            }
             /*       #region Information
                    nlog.Info("Request Ended...");
                    #endregion
