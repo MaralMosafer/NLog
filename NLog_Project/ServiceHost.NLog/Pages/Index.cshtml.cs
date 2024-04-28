@@ -16,8 +16,7 @@ namespace ServiceHost.NLog.Pages
         {
             for (int i = 0; i < 200; i++)
             {
-                nlog.Info($"Test Log For Rules {i}");
-                nlog.Warn($"Test Log For Rules {i}");
+                nlog.Info($"Will Save In DataBase {i}");
             }
             /*       #region Information
                    nlog.Info("Request Ended...");
